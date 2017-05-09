@@ -1,0 +1,96 @@
+<input id="text-search" 
+         type="text"
+         data-bind="ojComponent: {component: 'ojInputText', 
+                                   rawValue: titleSearch,
+                                   optionChange: filterBooks}"/>
+
+<table id="books-table" summary="Book List" aria-label="Books Table"
+       data-bind="ojComponent: {component: 'ojTable', 
+                                data: dsBooks, 
+                                columnsDefault: {sortable: 'none'}, 
+                                columns: [{headerText: 'Book Id'},
+                                          {headerText: 'Title'},
+                                          {headerText: 'Category'},
+                                          {headerText: 'Avg User Rating'},
+                                          {headerText: 'Action'}],
+                                           rowTemplate: 'row_tmpl'}">
+</table>
+
+<script type="text/html" id="row_tmpl">
+    <tr>
+        <td data-bind="text: _id">
+        </td>
+        <td data-bind="text: title">
+        </td>
+        <td data-bind="text: category">
+        </td>
+        <td>
+            <div id="gauge1" 
+		data-bind="ojComponent: {
+		  component: 'ojRatingGauge', 
+		  value:avg_user_rating,
+		  readOnly: true
+		 }" 
+		 style="width:120px;height:25px;">
+            </div>
+        </td>
+        <td>
+            <button 
+            data-bind="click:$parent.showBook, ojComponent: { component: 'ojButton', label: 'View' }">
+            </button>
+        </td>
+    </tr>
+</script>
+
+ <div style="display:none" id="modalDialog1" title="Book Details" 
+       data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide',
+       rootAttributes: { style: 'width: 55vw; height: 55vh'}}">
+     <div class="oj-dialog-body">
+       <div data-bind="with: currentBook">
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="oj-sm-3 oj-flex-item">Title</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: title ? title : ''"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">Description</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: description ? description : ''"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">Category</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: category ? category.name : ''"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">Language</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: language ? language : ''"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">Pages</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: pages"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">Author</div>
+                <div class="oj-sm-9 oj-flex-item" data-bind="text: author ? author.name : ''"></div>
+                
+                <div class="oj-sm-3 oj-flex-item">No of users slept</div>
+                <div class="oj-sm-9 oj-flex-item">
+                    <div id='pc1' data-bind="ojComponent:{
+                        component: 'ojPictoChart',
+                        items: pictoChartItems,
+                        animationOnDisplay: 'auto',
+                        columnCount: 5
+                      }"
+                      style="vertical-align:middle; margin-right:15px">                    
+                    </div>
+                </div>
+
+                <div class="oj-sm-3 oj-flex-item">Average User Rating</div>
+                <div class="oj-sm-9 oj-flex-item">
+                    <div id="gauge2" 
+                        data-bind="ojComponent: {
+                          component: 'ojRatingGauge', 
+                          value:avg_user_rating,
+                          readOnly: true
+                         }" 
+                         style="width:120px;height:25px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     
+  </div>

@@ -1,0 +1,26 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<label for="text-input-fn">First Number</label>
+  <input id="text-input-fn" 
+         type="text"
+         data-bind="ojComponent: {component: 'ojInputText', 
+                                  value: firstnumber}"/>
+  
+  
+  <label for="text-input-sn">Second Number</label>
+  <input id="text-input-sn" 
+         type="text"
+         data-bind="ojComponent: {component: 'ojInputText', 
+                                  value: secondnumber}"/>
+  <br/>
+   <input id="inputButton" type="button" 
+           data-bind="click: addNumbers, 
+                      ojComponent: {component: 'ojButton', label: 'Add Numbers'}"/>
+   
+   <br/>
+   
+   <span data-bind="text:result"></span>

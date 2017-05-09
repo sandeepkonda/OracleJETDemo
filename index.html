@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calculator Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script data-main="js/main.js" src="js/libs/require/require.js" type="text/javascript"></script>
+        
+        <link href="css/libs/oj/v3.0.0/alta/oj-alta-min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+              
+            <!-- stateId is an observable which will initially have isDefault property of main.js-->
+             <div  aria-label="Choose a navigation item" data-bind="ojComponent:{
+                                component: 'ojNavigationList',
+                                drillMode: 'none',
+                                selection: router.stateId,
+                                navigationLevel: 'application',
+                                edge: 'top'}" >
+                 <!--states is an observable present inside router which was configured in main.js. This will have  list configured in self.router.configure-->
+                <ul data-bind= "foreach: router.states">
+                    <li data-bind="attr: {id: id}">
+                        <a data-bind="text: label" href=""> </a>
+                    </li>                    
+                </ul>
+            </div>
+            
+            <!-- below commented tag is used to have page level navigation tabs -->
+            <!--div data-bind="ojModule: {name: 'tabs'}"></div-->
+            <!--moduleConfig is an observable which will have current module to be loaded. Initially it will have module details of isDefault module -->
+            <div data-bind="ojModule: router.moduleConfig"></div>
+        
+    </body>
+</html>

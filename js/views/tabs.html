@@ -1,0 +1,29 @@
+<div id="tabs-container">
+  <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+    <!-- tab bar -->
+    <ul>
+      <li><span>Math Calculator</span></li>
+      <li><span>Products</span></li>
+      <li><span>Departments</span></li>
+      <li><span>Books</span></li>
+      <li><span>Create Book</span></li>
+    </ul>
+
+    <!-- tab contents -->
+    <div id="tabs-1">
+        <div data-bind="ojModule: {name: 'mathcalc'}"></div>
+    </div>
+    <div id="tabs-2">
+        <div data-bind="ojModule: {name: 'products'}"></div>
+    </div>
+    <div id="tabs-3">
+        <div data-bind="ojModule: {name: 'departments'}"></div>
+    </div>
+    <div id="tabs-4">
+        <div data-bind="ojModule: {name: 'mybookslist'}"></div>
+    </div>
+    <div id="tabs-5">
+        <div data-bind="ojModule: {name: 'create'}"></div>
+    </div>
+  </div>
+</div>
