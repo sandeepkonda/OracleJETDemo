@@ -1,9 +1,4 @@
-# Oracle JET version 3.0.0
-
-## About Oracle JET
-Oracle JET is targeted at intermediate to advanced JavaScript developers working on client-side applications. It's a collection of open source JavaScript libraries along with a set of Oracle contributed JavaScript libraries that make it as simple and efficient as possible to build applications that consume and interact with Oracle products and services, especially Oracle Cloud services.
-
-This is an open source project maintained by Oracle Corp.
+Application to understand basic OJET concepts.
 
 ### Features and Benefits:
 Oracle JET is a modular toolkit allowing developers to use as much or as little of the features as they desire. Watch a short overview of what Oracle JET can do for you.
@@ -38,13 +33,4 @@ yo oraclejet <app name>
 See the [Oracle JET Developer Guide](http://docs.oracle.com/middleware/jet300/jet/) for complete installation details, including prerequisites.
 
 ## [Documentation](http://docs.oracle.com/middleware/jet300/jet/)
-Oracle JET comes with a full [Developers Guide](http://docs.oracle.com/middleware/jet300/jet/) to help with Getting Started and many common issues.
-
-## [Contributing](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
-Oracle JET is an open source project. Pull Requests are currently not being accepted. See 
-[CONTRIBUTING](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
-for details.
-
-## [License](https://github.com/oracle/oraclejet/tree/master/LICENSE.md)
-Copyright (c) 2014, 2017 Oracle and/or its affiliates
-The Universal Permissive License (UPL), Version 1.0
+Oracle JET comes with a full [Developers Guide](http://docs.oracle.com/middleware/jet300/jet/)
