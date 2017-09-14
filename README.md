@@ -1,5 +1,9 @@
 Application to understand basic OJET concepts.
 
+Site is published at : https://sandeepkonda.github.io/OracleJETDemo/
+
+### Note that 'Books' and 'Add Book' functionalities will not work, as listing of Books or Adding a new Book is done by making Ajax call to back-end webservice.
+
 ### Features and Benefits:
 Oracle JET is a modular toolkit allowing developers to use as much or as little of the features as they desire. Watch a short overview of what Oracle JET can do for you.
 
